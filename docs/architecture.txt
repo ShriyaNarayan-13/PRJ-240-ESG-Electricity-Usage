@@ -1,0 +1,22 @@
+PRJ-240 Architecture
+
+Electricity Meter / Manual Reading
+          |
+          v
+Data Entry (Date, Location, kWh)
+          |
+          v
+Data Storage / Sample CSV
+          |
+          v
+Dashboard
+  |       |       |
+  v       v       v
+Total   Compare  High Usage
+Usage   Locations Status
+          |
+          v
+Energy-Saving Action Tracking
+
+Technology:
+HTML + CSS + JavaScript + Chart.js

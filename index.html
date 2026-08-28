@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRJ-240 Electricity Usage Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Electricity Usage Dashboard</h1>
+      <p>PRJ-240 | ESG Intervention in Higher Education</p>
+      <span>Environment → Electricity Usage</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="cards">
+      <div class="card">
+        <h3>Total Usage</h3>
+        <p id="totalUsage">0 kWh</p>
+      </div>
+      <div class="card">
+        <h3>Highest Usage</h3>
+        <p id="highestUsage">0 kWh</p>
+      </div>
+      <div class="card">
+        <h3>High-Usage Records</h3>
+        <p id="highCount">0</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Add Electricity Reading</h2>
+      <form id="usageForm">
+        <label>Date
+          <input type="date" id="date" required>
+        </label>
+        <label>Location
+          <select id="location" required>
+            <option>Academic Block</option>
+            <option>Library</option>
+            <option>Hostel</option>
+          </select>
+        </label>
+        <label>Usage (kWh)
+          <input type="number" id="usage" min="0" step="0.1" required>
+        </label>
+        <button type="submit">Add Reading</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Usage Summary</h2>
+      <canvas id="usageChart"></canvas>
+    </section>
+
+    <section class="panel">
+      <h2>Electricity Records</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Location</th>
+            <th>Usage (kWh)</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="usageTable"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>PRJ-240 | Simple electricity monitoring prototype</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
